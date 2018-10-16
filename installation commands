@@ -1,0 +1,21 @@
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+
+
+sudo apt-get install curl
+sudo snap install jq  # version 1.5+dfsg-1
+
+download maven then set path as below:
+export PATH="$PATH":/home/ubuntu/Downloads/apache-maven-3.5.4/bin >> ~/.bashrc
+sudo apt install git
+sudo snap install aws-cli --classic
+
+
+Access key ID:AKIAIFUA5Z53OS7ZC2TQ
+Secret Access Key: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
+Default region name [None]: us-west-2
+Default output format [None]: json
+
+___________________________________
+required softwares:
+Maven 3, java8, jq, curl, 😀
