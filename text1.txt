@@ -1,1 +1,5 @@
 demo text in row#1
+Access key ID:AKIAIFUA5Z53OS7ZC2TQ
+Secret Access Key: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
+Default region name [None]: us-west-2
+Default output format [None]: json
