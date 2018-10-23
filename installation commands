@@ -13,3 +13,14 @@ sudo snap install aws-cli --classic
 ___________________________________
 required softwares:
 Maven 3, java8, jq, curl, 😀
+
+
+#!/bin/sh
+awsProjectARN="arn:aws:devicefarm:us-west-2:249933210673:project:3ecc7790-408c-47ae-844f-fd1f0afd6a1d"
+awsDevicePoolARN="arn:aws:devicefarm:us-west-2::devicepool:082d10e5-d7d7-48a5-ba5c-b33d66efa1f5"
+awsTestSpecARN="arn:aws:devicefarm:us-west-2:249933210673:upload:3ecc7790-408c-47ae-844f-fd1f0afd6a1d/60fa7c3a-4f7c-44c4-ae92-d7492cbab18a"
+awsTestPackageARN="arn:aws:devicefarm:us-west-2:249933210673:upload:3ecc7790-408c-47ae-844f-fd1f0afd6a1d/31d1ce77-da45-43fa-a23f-643b4b223a88"
+awsAPKARN="arn:aws:devicefarm:us-west-2:249933210673:upload:3ecc7790-408c-47ae-844f-fd1f0afd6a1d/63c48080-fd9c-4fbb-bd28-f92e6fddddfe"
+echo "Script is scheduling the run with above uploaded files and configuration"
+awsScheduleRunJSONResponse=`aws devicefarm schedule-run --project-arn $awsProjectARN --app-arn $awsAPKARN --device-pool-arn $awsDevicePoolARN --name "AWSCLI009" --test type=$awsTestType","testPackageArn=$awsTestPackageARN`","testSpecArn=$awsTestSpecARN
+
